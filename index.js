@@ -5,6 +5,8 @@ const cors = require("cors");
 const blogRoutes = require('./routes/blogs');
 const userRoutes = require('./routes/users');
 
+require('dotenv').config();
+
 const app = express();
 
 // const corsOptions = {
@@ -22,11 +24,7 @@ app.use("/blogs", blogRoutes);
 app.use("/users", userRoutes);
 
 //MongoDB database
-    mongoose.connect("mongodb+srv://LuisPaulo:admin123@cluster0.aere8.mongodb.net/BlogApp?retryWrites=true&w=majority&appName=Cluster0"
-, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    });
+    mongoose.connect(process.env.MONGODB_STRING);
 
     mongoose.connection.once('open', () => console.log('Now connected to MongoDB Atlas.'));
 
