@@ -10,7 +10,7 @@ require('dotenv').config();
 const app = express();
 
 const corsOptions = {
-    origin: ['http://localhost:3000', 'https://blogappapi-fznw.onrender.com', 'https://blog-app-virid-nine.vercel.app', 'https://blog-app-git-main-luis-paulo-san-gabriels-projects.vercel.app', 'https://blog-odbwb64xz-luis-paulo-san-gabriels-projects.vercel.app'],
+    origin: ['http://localhost:3000', 'https://blog-app-hazel-ten-71.vercel.app'],
     credentials: true,
     optionSuccessStatus: 200
 }
